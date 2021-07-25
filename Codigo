@@ -1,0 +1,87 @@
+#include <stdio.h>
+
+#include <stdio.h>
+/*
+int main()
+{
+    int y;
+    int *yPTR;
+    
+    y = 5;
+    yPTR = &y;
+    
+    printf("O ENDEREÇO DE MEMORIA de y é %p"
+            "\n O valor de yPTR é %p\n", &y, yPTR);
+        
+    printf("O VALOR de y é %d"
+            "\n O VALOR de *yPTR é %d", y, *yPTR);
+    
+    printf("\n\nMostrando que * e & são complemento um do outro\n &*yPTR = %p"
+            "\n*&yPTR = %p\n", &*yPTR, *&yPTR);
+            
+            
+            
+    return 0;
+}
+void cube(int *nPtr);
+
+int main (void){
+    int num = 5;
+    printf("Valor original do numero é %d", num);
+    cube(&num);
+    printf("\n O novo valor do numero é %d\n", num);
+    return 0;
+}
+
+void cube(int *nPtr){
+    *nPtr = *nPtr * *nPtr * *nPtr;
+}
+
+void contador(int *i){
+    printf("Função contador, i =" );
+    while (*i < 10)
+    printf("%d",(*i)++);
+}
+
+int main(){
+    int i =2;
+    printf("\n Main antes da chamada da função contador, i= %d.\n",i);
+    contador(&i);
+    printf("\n Main depois da função contador, i= %d.\n", i);
+}*/
+/*
+void soma10(int *x)
+{
+  *x = *x + 10;  
+  printf("Valor de x apos a soma = %d \n",*x);
+  return;
+}
+
+int main(void)
+{
+  int num;
+  printf("Digite um numero: ");
+  scanf("%d", &num);  
+     
+  printf("O numero digitado foi: %d \n",num);  
+  
+  soma10(&num);
+  printf("Agora o numero vale: %d \n",num);  
+  return 0;
+}
+*/
+
+
+int main()
+{
+    int y;
+    int *yPtr;
+    y = 5;
+    yPtr = &y;
+    
+    printf ("O endereço de memória de y é: %p\n", &y);
+    printf ("O valor de yPtr é: %p\n", yPtr);//imprime o endereço de memória do valor armazenado no ponteiro ou seja o endereço de memória de y 
+    printf ("O valor do endereço de memória que está no ponteiro é: %d \n\n", *yPtr); //operador unário retorna o valor do objeto que está apontando    
+    printf ("Mostrando que * e & são complementos um do outro: \n &*yPtr: %p\n *&yPtr: %p", &*yPtr, *&yPtr); //(O endereço & do que está contido * em Yptr) e (O que está contido * no endereço & de yPtr)
+    return 0;
+}
