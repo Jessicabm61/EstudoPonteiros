@@ -1,0 +1,85 @@
+/*Ponteiro não constante para dados não constantes
+
+#include <stdio.h>
+#include <ctype.h>
+
+void conversaoM (char *xPtr);
+
+
+int main()
+{
+char caracteres[] = "Conjunto de caracteres 123,5";
+printf ("A string antes da convesão: %s\n", caracteres);
+conversaoM (caracteres); //Note que nesse caso não precisou colocar o &
+printf ("A string depois da conversão: %s\n", caracteres);
+  return 0;
+}
+
+void conversaoM (char *xPtr){
+    while (*xPtr != '\0'){ //Ciclo While até o final da string
+        if (islower(*xPtr)){ //Retorna verdaeiro se for letra mínuscula
+            *xPtr = toupper (*xPtr); //Converte mínuscula para maíscula e passa para o que está contido no endereço de memória do ponteiro
+        } 
+        ++xPtr; //incrementa o ponteiro
+    }
+}
+
+*/
+
+
+
+
+/*Ponteiro não constante para dados constantes
+
+#include <stdio.h>
+
+
+void caracteresM (const char *xPtr); //dados constantes dentro da função definida, não é possível alterar esses dados somente imprimir pois os dados são constantes
+
+int main (void){
+
+char caracteres [] = "Conjunto de caracteres 123,5";
+printf ("Imprime string da função main: %s\n", caracteres);
+caracteresM (caracteres);
+
+return 0;    
+}
+
+void caracteresM (const char *xPtr){
+    printf ("Imprime string da função caracteresM: ");
+    for (;*xPtr != '\0';xPtr++){ //for para pontereiros de string
+        printf ("%c", *xPtr);
+        
+    }
+} */
+
+
+
+
+/*Ponteiro constante para dados não constantes
+
+int main (void){
+    
+    int x, y;
+    int *const Ptr = &x; //declara um ponteiro constante
+    *Ptr = 7; //pode aletrar os dados
+    *Ptr = &y;//Compilador retorna com erro pois não pode alterar o endereço de um ponteiro constante
+return 0;
+} */
+
+
+
+
+/*Ponteiro constante para dados constantes
+
+#include <stdio.h>
+
+int main (void){
+    int x=3;
+    int y;
+    const int *const Ptr = &x; //o valor do ponteiro "*" e o endereço de memória do ponteiro & são constantes 
+    printf ("%d\n", *Ptr);
+    *Ptr = 8; //Erro pois não pode ser alterado o valor de um ponteiro constante
+    Ptr = &y; //Erro pois não pode ser alterado o endereço de um ponteiro constante
+return 0;
+} */
