@@ -1,4 +1,3 @@
-*.c linguist-detectable=true
 /*Ponteiro não constante para dados não constantes
 
 #include <stdio.h>
