@@ -62,7 +62,7 @@ int main (void){
     
     int x, y;
     int *const Ptr = &x; //declara um ponteiro constante
-    *Ptr = 7; //pode aletrar os dados
+    *Ptr = 7; //pode alterar os dados
     *Ptr = &y;//Compilador retorna com erro pois não pode alterar o endereço de um ponteiro constante
 return 0;
 } */
