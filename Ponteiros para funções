@@ -8,14 +8,16 @@ void f3 (int c);
 
 int main()
 {
-    void(*f[3])(int) = {f1, f2, f3}; //Inicializando array de ponteiros para funções
+    void(*f[3])(int) = {f1, f2, f3}; //Inicializando array de três ponteiros para funções que usam argumentos do tipo inteiro e não retorna nada 'void'
 
     int escolha;
     printf ("Digite um numero entre 0 e 2, para sair 3: \n");
     scanf ("%d", &escolha);
     
     while (escolha >= 0 && escolha < 3){
-        (*f[escolha])(escolha); //chama a função
+                                 //Chamando a função
+        (*f[escolha])(escolha); //(*f[escolha]) é a mesma coisa que uma escolha de array assim array[1] porém com ponteiros e ao invés do 1, está chamando a opção escolha
+                                // (escolha) é o que será passado como argumento para as funções
         
     printf ("Digite um numero entre 0 e 2, para sair 3: \n");
     scanf ("%d", &escolha);   
