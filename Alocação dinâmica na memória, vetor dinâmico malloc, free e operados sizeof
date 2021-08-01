@@ -1,0 +1,39 @@
+//Alocação dinâmica na memória, vetor dinâmico
+#include <stdio.h>
+#include <stdlib.h>
+
+//Calcular o numero de bytes necessários para serem reservados
+//reserva esse espaço, precisa utilizar ponteiros para apontaar para o local reservado
+
+
+int main () {
+    float *v;
+    int i, num_elementos;
+    printf ("Digite o numero de elementos do vetor: \n");
+    scanf ("%d", &num_elementos);
+
+    //Calcular o numero de bytes necessários do vetor utilizando sizeof
+    
+    v = (float *) malloc(num_elementos * sizeof(float)); //utilizando sizeof calculou a quantidade de bytes
+                                         //armazenou esse espaço utilizando a função malloc
+                                        //v = (float *) vetor dinâmico apontado para o espaço de memória
+    
+    
+    //colocar dados em um vetor
+    
+    for (i=0; i<num_elementos; i++){
+        printf ("\nDigite o valor da posição %d do vetor: ", i);
+        scanf ("%f", &v[i]); //armazena valores no vetor
+    }
+    
+    //verificar o vetor e imprimir seus valores
+    printf ("\n-----valor do vetor dinâmico----\n\n");
+    for(i=0;i<num_elementos; i++){
+        printf ("%.2f\n", v[i]);
+    }
+    
+    //liberar espaço da memória alocada utilizando free
+    free(v);
+
+    return 0;
+}
