@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () {
+    int n, i, *p, sum=0;
+    printf ("Digite um numero de elementos"); //numeros de elementos do vetor
+    scanf ("%d", &n);
+    
+    p = (int*) calloc(n, sizeof(int)); //calloc cria e modifica o array dinâmico
+    if(p == NULL){
+        printf ("Erro! memoria não alocada.");
+        exit(0);
+    }
+    printf ("Digite o elemento: ");
+    for(i=0;i<n;++i){
+        scanf("%d", p+i); //armazena valores para o vetor utilizando aritimética de ponteiros
+        sum += *(p+i); // a cada for incrementa e soma o valor armazenado no ponteiro
+    }
+    
+    printf ("Soma = %d", sum);
+    free(p);
+
+    return 0;    
+}
