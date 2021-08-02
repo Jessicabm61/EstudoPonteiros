@@ -14,9 +14,12 @@ int main () {
 
     //Calcular o numero de bytes necessários do vetor utilizando sizeof
     
-    v = (float *) malloc(num_elementos * sizeof(float)); //utilizando sizeof calculou a quantidade de bytes
-                                         //armazenou esse espaço utilizando a função malloc
-                                        //v = (float *) vetor dinâmico apontado para o espaço de memória
+    v = (float *) malloc(num_elementos * sizeof(float)); 
+    
+    //v é o ponteiro do tipo float declarado na linha 10
+    //(float *) typcast que converte o ponteiro retornado da função malloc, é necessário pois a função malloc retorna um ponteiro do tipo void*    
+    //malloc() armazena um espaço na memória e retorna um ponteiro para esse espaço, o número de bytes armazenados é determinado dentro dos parentêses
+    // num_elementos é o valor do scanf que está multiplicando sizeof(float) ou seja, sizeof retorna o numero de bytes de um float 
     
     
     //colocar dados em um vetor
