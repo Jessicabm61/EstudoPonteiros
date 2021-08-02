@@ -20,7 +20,7 @@ int main () {
     //(float *) typcast que converte o ponteiro retornado da função malloc, é necessário pois a função malloc retorna um ponteiro do tipo void*    
     //malloc() armazena um espaço na memória e retorna um ponteiro para esse espaço, o número de bytes armazenados é determinado dentro dos parentêses
     // num_elementos é o valor do scanf que está multiplicando sizeof(float) ou seja, sizeof retorna o numero de bytes de um float 
-    
+    //a função malloc ao reservar esse espaço de memória não limpa a sujeira desse espaço
     
     //colocar dados em um vetor
     
