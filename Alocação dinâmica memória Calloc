@@ -6,11 +6,21 @@ int main () {
     printf ("Digite um numero de elementos"); //numeros de elementos do vetor
     scanf ("%d", &n);
     
-    p = (int*) calloc(n, sizeof(int)); //calloc cria e modifica o array dinâmico
-    if(p == NULL){
-        printf ("Erro! memoria não alocada.");
+    p = (int*) calloc(n, sizeof(int)); 
+    //p é variável do tipo ponteiro declarada na linha 5
+    //(int*) é um typecast para converter o o ponteiro do tipo void* retornado da função calloc para ponteiro do tipo int* igual a variável p
+   //calloc armazena na memória um espaço e retorna em um vetor void*, esse espaço será determinado por dois argunmentos
+   //(n,sizeof(int)) dois argumentos dentro da função calloc, o primeiro argumento multiplica o seegundo argumento, sizeof(int) é o tamanho de bytes de um inteiro 
+   //a função malloc ao reservar esse espaço de memória deixa os valores desse espaço como sendo 0
+   
+   
+    //esse if serva para quando a função Calloc não encontrou espaço na memória necessário, por exemplo, quando não tem memória ram disponível, pois o ponteiro retornará null
+    if(p == NULL){                     
+    printf ("Erro! memoria não alocada.");
         exit(0);
     }
+    
+    
     printf ("Digite o elemento: ");
     for(i=0;i<n;++i){
         scanf("%d", p+i); //armazena valores para o vetor utilizando aritimética de ponteiros
