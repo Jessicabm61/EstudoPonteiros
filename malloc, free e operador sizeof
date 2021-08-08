@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 //Calcular o numero de bytes necessários para serem reservados
-//reserva esse espaço, precisa utilizar ponteiros para apontaar para o local reservado
+//reserva esse espaço, precisa utilizar ponteiros para apontar para o local reservado
 
 
 int main () {
