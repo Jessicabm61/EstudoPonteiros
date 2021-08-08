@@ -1,0 +1,19 @@
+Escreva um programa em C para somar dois números usando ponteiros. Devem usar funções definidas pelo usuario.
+
+
+#include <stdio.h>
+
+
+void somaValor(int *n1, int *n2){
+    int soma = *n1 + *n2;
+    printf ("resultado da soma de %i e %i é %i", *n1, *n2, soma);
+}
+
+
+int main (){
+    int n1, n2;
+    printf ("Insira dois números inteiros: ");
+    scanf ("%i %i", &n1, &n2);
+    somaValor(&n1, &n2);
+}
+
