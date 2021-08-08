@@ -11,7 +11,7 @@ int main()
         int segundos;
     };
     
-    struct horario agora; //declarando uma estrutura do tipo horário chamada agora
+    struct horario agora; //declarando uma estrutura do tipo horário chamada agora, ao declarar a estrutura não reserva nenhum espaço na memória
     
     agora.horas=15; //nome da estrutura.variável dentro da estrutura altera os valores das variáveis da estrutura
     agora.minutos=17;
