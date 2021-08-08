@@ -17,3 +17,36 @@ int main (){
     somaValor(&n1, &n2);
 }
 
+
+
+
+
+Escreva um programa em C para adicionar números usando chamada por referência. Utilize funções definida pelo usuario.
+
+#include <stdio.h>
+
+void adicionarNumeros(int*tamanho);
+
+int main (){
+    int tamanho;
+    printf ("Quantos números deseja adicionar?");
+    scanf ("%i", &tamanho);
+    
+    adicionarNumeros(&tamanho);
+    
+}
+
+void adicionarNumeros(int*tamanho){
+    int i;
+    printf ("Insira os valores: \n");
+    int array[*tamanho];
+    for(i=0; i<*tamanho; i++){
+        scanf ("%i", &array[i]);
+    }
+    
+    printf ("Valores inseridos: \n");
+    for(i=0; i<*tamanho; i++){
+        printf ("%i, ", array[i]);
+    }
+    
+}
