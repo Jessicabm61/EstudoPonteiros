@@ -50,3 +50,34 @@ void adicionarNumeros(int*tamanho){
     }
     
 }
+
+
+Escreva um programa em C para encontrar o número máximo entre 10 números usando um ponteiro. Faça uso de funções definida pelo usuario.
+
+#include <stdio.h>
+
+void maiorNumero(int *array, int *maior); //declarando função de ponteiros que recebe o valor de um array e recebe o valor da variável maior
+
+void main (){
+    int i, array[10], maior;   //declara um array e uma variável maior
+    printf ("Insira 10 números: ");  //recebe os valores do array
+        for (i=0; i<10; i++){
+            scanf ("%i", &array[i]);        
+        }
+    
+        for (i=0; i<10; i++){   //imprime os valores do array
+            printf ("%i ", array[i]);        
+        }
+        
+        maiorNumero(array, &maior); //chama a função passando como parâmetro o array e o endereço de memória da variável maior
+}
+
+void maiorNumero(int *array, int *maior){ //recebe o array em forma de ponteiro e recebe o valor do endereço de memória da variável maior
+    *maior = *array; //o valor da variável maior passa ser o valor do ponteiro na primeira posição pois o ponteiro sempre aponta pra primeira posição 
+    int i;
+    for (i=0; i<10; i++){
+        if (*maior < *(array + i)) //percorre o array usando aritimética de ponteiros para achar o maior valor
+            *maior = *(array + i);
+    }
+    printf ("\nO maior valor digitado é %i", *maior);
+}
