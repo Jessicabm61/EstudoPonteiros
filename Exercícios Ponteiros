@@ -81,3 +81,19 @@ void maiorNumero(int *array, int *maior){ //recebe o array em forma de ponteiro 
     }
     printf ("\nO maior valor digitado é %i", *maior);
 }
+
+
+Escreva um programa em C para imprimir os elementos de um array na ordem inversa utilizando ponteiros. Faça us ode função definida pelo usuario.
+#include <stdio.h>
+
+void imprimeInverso (int *array){ //recebe o array em forma de ponteiro
+    int i;
+    for (i=9; i>=0; i--){ //percorre o array de forma inversa
+        printf ("%i", *(array+i)); //imprime o array começando pelo último elemento através de ponteiros
+    }
+}
+
+int main (){
+    int array[10] = {1, 3, 5, 3, 2, 9, 8, 6, 4, 2}; //declara o array e inicializa
+    imprimeInverso(array); //chama a função passando como parâmetro o array
+}
