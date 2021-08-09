@@ -8,7 +8,7 @@ void f3 (int c);
 
 int main()
 {
-    void(*f[3])(int) = {f1, f2, f3}; //Inicializando array de três ponteiros para funções que usam argumentos do tipo inteiro e não retorna nada 'void'
+    void(*f[3])(int) = {f1, f2, f3}; //Inicializando array de três ponteiros que apontam para funções que usam argumentos do tipo inteiro e não retorna nada 'void'
 
     int escolha;
     printf ("Digite um numero entre 0 e 2, para sair 3: \n");
