@@ -3,7 +3,7 @@ struct StructName
   int property;
  } *variableName;
  
- //inicializando pontiero
+ //inicializando ponteiro
  variableName = (struct variableName*) malloc (sizeof (struct StructName));
  //(struct variableName*) type cast
  // malloc (sizeof (struct StructName)) reserva a memória e retorna um ponteiro
