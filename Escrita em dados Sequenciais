@@ -1,0 +1,19 @@
+//Criar um arquivo de dados sequenciais
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    FILE *fp;//Primeiro criar um ponteiro que será apontado para o arquivo
+    fp = fopen("NovoA.txt", "w"); //função que aponta para o arquivo criado e abre o arquivo utilizando modo w
+    
+    if (fp==NULL){
+        puts("Arquivo não pode ser aberto"); 
+        exit(1);
+    }
+    else{
+        fprintf(fp,"Muito bem!");
+        fclose(fp); //fecha o arquivo
+    }
+   
+    return 0;
+}
